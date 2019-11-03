@@ -3,16 +3,46 @@
 *  */
 package cnc;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
+import com.fazecast.jSerialComm.*;
 
 public class cnc {
     private static int GlobalXMax = 10; //Change to correct value
     private static int GlobalYMax = 10; //Change to correct value
     private static String startPointCode;
     private static String circleCode;
+
+    private static SerialPort portName;
+    private static SerialPort[] availablePorts;
+
     public static void main(String [] args){
+        availablePorts = SerialPort.getCommPorts(); //get all COM-Ports on the used PC
 
         createCode(2,5); //Bounds for the Diameter point
+
+        ArrayList<String> portList = new ArrayList<String>(); //make a list of all available Ports
+        for(SerialPort p:availablePorts)
+        {
+            portList.add(p.getSystemPortName());
+        }
+        System.out.println("Select a Port from this List: "); //let the user chose a port
+        for(int i = 0; i<portList.size();i++)
+        {
+            String msg = i +": "+portList.get(i);
+            System.out.println(msg);
+        }
+        int choice = 1;
+        try {
+            choice = System.in.read()-48; //ASCII-Int conversion
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        portName  = SerialPort.getCommPort(availablePorts[choice].toString()); //use the selected port
+        portName.setBaudRate(115200); //GRBL defualt baud rate
+        portName.setComPortTimeouts(65536,0,0);
+        portName.openPort();
     }
 
     static private void createCode(int min, int max){
