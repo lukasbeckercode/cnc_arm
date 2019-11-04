@@ -4,26 +4,30 @@
 package cnc;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import com.fazecast.jSerialComm.*;
 
 public class cnc {
-    private static int GlobalXMax = 10; //Change to correct value
-    private static int GlobalYMax = 10; //Change to correct value
     private static String startPointCode;
     private static String circleCode;
 
     private static SerialPort portName;
-    private static SerialPort[] availablePorts;
+    private  boolean run = false;
+
 
     public static void main(String [] args){
-        availablePorts = SerialPort.getCommPorts(); //get all COM-Ports on the used PC
+        SerialPort[] availablePorts = SerialPort.getCommPorts(); //get all COM-Ports on the used PC
+        cnc cnc = new cnc();
 
-        createCode(2,5); //Bounds for the Diameter point
 
         ArrayList<String> portList = new ArrayList<String>(); //make a list of all available Ports
-        for(SerialPort p:availablePorts)
+        for(SerialPort p: availablePorts)
         {
             portList.add(p.getSystemPortName());
         }
@@ -39,20 +43,56 @@ public class cnc {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        portName  = SerialPort.getCommPort(availablePorts[choice].toString()); //use the selected port
-        portName.setBaudRate(115200); //GRBL defualt baud rate
+        portName  = SerialPort.getCommPort(availablePorts[choice].getSystemPortName()); //use the selected port
+        portName.setBaudRate(115200); //GRBL default baud rate
         portName.setComPortTimeouts(65536,0,0);
         portName.openPort();
+
+
+        if(portName.openPort()) {
+            System.out.println("Selected Port opened!");
+            InputStream in = portName.getInputStream();
+            Timer timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    try {
+                       while  (in.available() > 0) { //As long as there is data coming in, read it
+                            String data = Character.toString((char) in.read()); //Save the incoming data in a variable
+                            System.out.print(data);
+                        }
+                        cnc.run = true;
+
+                    } catch (Exception ex) {
+                        System.out.println("Error");
+                    }
+                }
+            },10,50);
+
+            for (int i = 0; i<5;i++)
+            {
+                cnc.createCode(2, 5); //Bounds for the Diameter point
+            }
+
+
+        }else{
+            System.out.println("Error: Could not connect to Port");
+        }
+
     }
 
-    static private void createCode(int min, int max){
+         void createCode(int min, int max){
         Random random = new Random();
         int Diameter = random.nextInt((max-min)+1)+min; //Creates a random diameter within our machine bounds
         System.out.println(Diameter);
         int newXMin = Diameter;
         int newYMin = Diameter;
-        int newXMax = GlobalXMax - Diameter;
-        int newYMax = GlobalYMax - Diameter;
+             //Change to correct value
+             int globalXMax = 10;
+             int newXMax = globalXMax - Diameter;
+             //Change to correct value
+             int globalYMax = 10;
+             int newYMax = globalYMax - Diameter;
         int startX = random.nextInt((newXMax-newXMin)+1) + newXMin;
         int startY = random.nextInt((newYMax-newYMin)+1) + newYMin;
         int Mx = 0;
@@ -83,5 +123,50 @@ public class cnc {
         circleCode = "G02 "+ "X" + startX + " Y" + startY + " I" + Mx + " J" + My;
         System.out.println(startPointCode);
         System.out.println(circleCode);
+
+        PrintWriter output = new PrintWriter(portName.getOutputStream());
+       output.flush();
+
+        Thread thread = new Thread(()->{
+
+
+            try {
+                Thread.sleep(100L); //wait a bit
+            } catch (Exception var4) {
+                System.out.println("Error");
+            }
+
+            output.println("F100"); //set the FeedRate
+            output.println(startPointCode); //s
+           // output.println(circleCode);
+            output.flush(); // Flush the port
+            System.out.println("DATA SENT");
+            try {
+                Thread.sleep(100L); //wait a bit
+            } catch (Exception var3) {
+                System.out.println("Error");
+            }
+
+
+
+        });
+        Timer timer2 = new Timer();
+        timer2.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if(run){
+                    try{
+                        thread.start();
+                    }catch (Exception ex){
+
+                    }
+
+
+                    run = !run;
+                }
+            }
+        },2000,100);
+
+
     }
 }
