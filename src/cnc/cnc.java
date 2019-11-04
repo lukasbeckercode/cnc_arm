@@ -136,7 +136,7 @@ class cnc {
 
             output.println("F100"); //set the FeedRate
             output.println(startPointCode); //s
-           // output.println(circleCode);
+            output.println(circleCode);
             output.flush(); // Flush the port
             System.out.println("DATA SENT");
             try {
