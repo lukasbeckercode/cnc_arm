@@ -13,9 +13,8 @@ import java.util.TimerTask;
 
 import com.fazecast.jSerialComm.*;
 
-public class cnc {
+class cnc {
     private static String startPointCode;
-    private static String circleCode;
 
     private static SerialPort portName;
     private  boolean run = false;
@@ -26,7 +25,7 @@ public class cnc {
         cnc cnc = new cnc();
 
 
-        ArrayList<String> portList = new ArrayList<String>(); //make a list of all available Ports
+        ArrayList<String> portList = new ArrayList<>(); //make a list of all available Ports
         for(SerialPort p: availablePorts)
         {
             portList.add(p.getSystemPortName());
@@ -81,20 +80,19 @@ public class cnc {
 
     }
 
-         void createCode(int min, int max){
+         @SuppressWarnings("SameParameterValue")
+         private void createCode(@SuppressWarnings("SameParameterValue") int min, int max){
         Random random = new Random();
         int Diameter = random.nextInt((max-min)+1)+min; //Creates a random diameter within our machine bounds
         System.out.println(Diameter);
-        int newXMin = Diameter;
-        int newYMin = Diameter;
              //Change to correct value
              int globalXMax = 10;
              int newXMax = globalXMax - Diameter;
              //Change to correct value
              int globalYMax = 10;
              int newYMax = globalYMax - Diameter;
-        int startX = random.nextInt((newXMax-newXMin)+1) + newXMin;
-        int startY = random.nextInt((newYMax-newYMin)+1) + newYMin;
+        int startX = random.nextInt((newXMax- Diameter)+1) + Diameter;
+        int startY = random.nextInt((newYMax- Diameter)+1) + Diameter;
         int Mx = 0;
         int My = 0;
 
@@ -120,7 +118,7 @@ public class cnc {
                 System.out.println("ERROR, SHITS FUCKED");
         }
         startPointCode = "G01 " + "X" + startX + " Y" + startY;
-        circleCode = "G02 "+ "X" + startX + " Y" + startY + " I" + Mx + " J" + My;
+             String circleCode = "G02 " + "X" + startX + " Y" + startY + " I" + Mx + " J" + My;
         System.out.println(startPointCode);
         System.out.println(circleCode);
 
@@ -155,6 +153,7 @@ public class cnc {
             @Override
             public void run() {
                 if(run){
+                    //noinspection CatchMayIgnoreException
                     try{
                         thread.start();
                     }catch (Exception ex){

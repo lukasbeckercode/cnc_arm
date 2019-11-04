@@ -1,6 +1,6 @@
 /*
  * This sketch is for testing purposes only! It drives the every axis 200 steps forward and backwards
- * I copied this sketch from the internet, it was written by the dumbest possible programmer, so bugs are likley
+ * I copied this sketch from the internet, it was written by the dumbest possible programmer, so bugs are likely
 */
 
 # define EN 8 // stepper motor enable , active low

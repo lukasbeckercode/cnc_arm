@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc82cbe1-a00c-40b5-b6b9-83161b453025" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Lukas.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cncArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cncArm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cncArm/cnc/cnc.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cnc/cnc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cnc/cnc.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,6 +41,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572604022063</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added full Serial Communication! &#10;Code works!">
+      <created>1572871643970</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572871643970</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +133,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="INITIAL COMMIT&#10;This commit contains an empty java project and a test file for the arduino." />
     <MESSAGE value="Edited README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited README" />
+    <MESSAGE value="Added full Serial Communication! &#10;Code works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added full Serial Communication! &#10;Code works!" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
