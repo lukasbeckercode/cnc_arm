@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc82cbe1-a00c-40b5-b6b9-83161b453025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/cncArm_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cncArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cncArm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +53,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573564151243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Edited Readme.md">
+      <created>1573565755851</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573565755851</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created .gitignore">
+      <created>1573565802655</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573565802655</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +186,19 @@
     <MESSAGE value="Added full Serial Communication! &#10;Code works!" />
     <MESSAGE value="Added full Serial Communication! &#10;Code works!&#10;Performed Code-Cleanup" />
     <MESSAGE value="Added a config file&#10;Added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a config file&#10;Added comments" />
+    <MESSAGE value="Edited Readme.md" />
+    <MESSAGE value="Created .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created .gitignore" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="606" y="114" key="CommitChangelistDialog2" timestamp="1576172805645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="606" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576172805645" />
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576172677589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576172677589" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
