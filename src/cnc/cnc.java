@@ -105,7 +105,7 @@ class cnc {
             //RUN THE CNC CYCLES
             for (int i = 0; i<config.cycles;i++)
             {
-                cnc.createCode(2, 5); //Bounds for the Diameter point TODO:CHANGE TO CORRECT VALUES
+                cnc.createCode(50, 70); //Bounds for the Diameter point TODO:CHANGE TO CORRECT VALUES
             }
 
         }else{
@@ -122,10 +122,10 @@ class cnc {
         int Diameter = random.nextInt((max-min)+1)+min; //Creates a random diameter within our machine bounds
         System.out.println(Diameter); //FOR DEBUGGING
              //TODO:Change to correct value
-             int globalXMax = 10; //Physical X Border
+             int globalXMax = 260; //Physical X Border
              int newXMax = globalXMax - Diameter; //Virtual Border
-             //TODO:Change to correct value
-             int globalYMax = 10; //Physical Y Border
+
+             int globalYMax = 630; //Physical Y Border
              int newYMax = globalYMax - Diameter; //Virtual Border
         int startX = random.nextInt((newXMax- Diameter)+1) + Diameter; //Starting point within Borders
         int startY = random.nextInt((newYMax- Diameter)+1) + Diameter; //Starting point within Borders
@@ -137,20 +137,20 @@ class cnc {
 //----------------------------------------------------------------------------------------------------------------------
         switch (randDir){
             case 0: //DOWN
-                Mx = startX - Diameter/2;
+                Mx =  -Diameter/2;
                 My = 0;
                 break;
             case 1: //UP
-                Mx = startX + Diameter/2;
+                Mx =  Diameter/2;
                 My = 0;
                 break;
             case 2: //LEFT
                 Mx = 0;
-                My = startY - Diameter/2;
+                My = -Diameter/2;
                 break;
             case 3: //RIGHT
                 Mx = 0;
-                My = startY + Diameter/2;
+                My =  Diameter/2;
                 break;
             default:
                 System.out.println("ERROR, SHITS FUCKED");
@@ -175,7 +175,7 @@ class cnc {
                 System.out.println("Error");
             }
 
-            output.println("F100"); //set the FeedRate
+            output.println("F1500"); //set the FeedRate
             output.println(startPointCode); //send the Start Point
             output.println(circleCode); //Send the Circle Code
             output.flush(); // Flush the port
