@@ -15,10 +15,12 @@ import com.fazecast.jSerialComm.*;
 class cnc {
 
     //GLOBAL VARIABLES -----------------------------------------------------------
-    private static String startPointCode;
+
     private static SerialPort portName;
     private  boolean run = false;
     private static File configFile = new File("config.txt");
+    private Timer timer2 = new Timer();
+   int getCycles;
 //----------------------------------------------------------------------------------------------------------------------
     public static void main(String [] args) throws FileNotFoundException {
         //LOCAL VARIABLES
@@ -103,10 +105,10 @@ class cnc {
             },10,50);
 //----------------------------------------------------------------------------------------------------------------------
             //RUN THE CNC CYCLES
-            for (int i = 0; i<config.cycles;i++)
-            {
+
+                cnc.getCycles = config.cycles;
                 cnc.createCode(50, 70); //Bounds for the Diameter point TODO:CHANGE TO CORRECT VALUES
-            }
+
 
         }else{
             System.out.println("Error: Could not connect to Port");
@@ -116,97 +118,108 @@ class cnc {
 //----------------------------------------------------------------------------------------------------------------------
     //THIS METHOD CREATES RANDOM CIRCLES
          @SuppressWarnings("SameParameterValue")
-         private void createCode(@SuppressWarnings("SameParameterValue") int min, int max){
-        //LOCAL VARIABLES
-        Random random = new Random();
-        int Diameter = random.nextInt((max-min)+1)+min; //Creates a random diameter within our machine bounds
-        System.out.println(Diameter); //FOR DEBUGGING
-             //TODO:Change to correct value
-             int globalXMax = 260; //Physical X Border
-             int newXMax = globalXMax - Diameter; //Virtual Border
+         private void createCode(@SuppressWarnings("SameParameterValue") int min, int max) {
+             for (int i = -1; i < getCycles; i++) {
+                 //LOCAL VARIABLES
+                 Random random = new Random();
+                 int Diameter = random.nextInt((max - min) + 1) + min; //Creates a random diameter within our machine bounds
+                 System.out.println(Diameter); //FOR DEBUGGING
+                 //TODO:Change to correct value
+                 int globalXMax = 260; //Physical X Border
+                 int newXMax = globalXMax - Diameter; //Virtual Border
 
-             int globalYMax = 630; //Physical Y Border
-             int newYMax = globalYMax - Diameter; //Virtual Border
-        int startX = random.nextInt((newXMax- Diameter)+1) + Diameter; //Starting point within Borders
-        int startY = random.nextInt((newYMax- Diameter)+1) + Diameter; //Starting point within Borders
-             //Point, around which the machine draws an Arc
-        int Mx = 0;
-        int My = 0;
+                 int globalYMax = 630; //Physical Y Border
+                 int newYMax = globalYMax - Diameter; //Virtual Border
+                 int startX = random.nextInt((newXMax - Diameter) + 1) + Diameter; //Starting point within Borders
+                 int startY = random.nextInt((newYMax - Diameter) + 1) + Diameter; //Starting point within Borders
+                 //Point, around which the machine draws an Arc
+                 int Mx = 0;
+                 int My = 0;
 
-        int randDir = random.nextInt(4); //This determines the Direction in which the circle will be drawn
+                 int randDir = random.nextInt(4); //This determines the Direction in which the circle will be drawn
 //----------------------------------------------------------------------------------------------------------------------
-        switch (randDir){
-            case 0: //DOWN
-                Mx =  -Diameter/2;
-                My = 0;
-                break;
-            case 1: //UP
-                Mx =  Diameter/2;
-                My = 0;
-                break;
-            case 2: //LEFT
-                Mx = 0;
-                My = -Diameter/2;
-                break;
-            case 3: //RIGHT
-                Mx = 0;
-                My =  Diameter/2;
-                break;
-            default:
-                System.out.println("ERROR, SHITS FUCKED");
-        }
+                 switch (randDir) {
+                     case 0: //DOWN
+                         Mx = -Diameter / 2;
+                         My = 0;
+                         break;
+                     case 1: //UP
+                         Mx = Diameter / 2;
+                         My = 0;
+                         break;
+                     case 2: //LEFT
+                         Mx = 0;
+                         My = -Diameter / 2;
+                         break;
+                     case 3: //RIGHT
+                         Mx = 0;
+                         My = Diameter / 2;
+                         break;
+                     default:
+                         System.out.println("ERROR, SHITS FUCKED");
+                 }
 //----------------------------------------------------------------------------------------------------------------------
 //CREATE THE G-CODE
-        startPointCode = "G01 " + "X" + startX + " Y" + startY;
-        String circleCode = "G02 " + "X" + startX + " Y" + startY + " I" + Mx + " J" + My;
-//----------------------------------------------------------------------------------------------------------------------
-        //DEBUGGING-----------------------------------------------------------------------------------------------------
-        System.out.println(startPointCode);
-        System.out.println(circleCode);
-        //--------------------------------------------------------------------------------------------------------------
-        //INITIALIZE SENDING THE G-CODE
-        PrintWriter output = new PrintWriter(portName.getOutputStream());
-        output.flush();
-//----------------------------------------------------------------------------------------------------------------------
-        Thread thread = new Thread(()->{
-            try {
-                Thread.sleep(100L); //wait a bit
-            } catch (Exception var4) {
-                System.out.println("Error");
-            }
+                 String startPointCode = "G01 " + "X" + startX + " Y" + startY;
+                 String circleCode = "G02 " + "X" + startX + " Y" + startY + " I" + Mx + " J" + My;
+                 //DEBUGGING-----------------------------------------------------------------------------------------------------
+                 System.out.println(startPointCode);
+                 System.out.println(circleCode);
+                 //--------------------------------------------------------------------------------------------------------------
 
-            output.println("F1500"); //set the FeedRate
-            output.println(startPointCode); //send the Start Point
-            output.println(circleCode); //Send the Circle Code
-            output.flush(); // Flush the port
-            System.out.println("DATA SENT");
-            try {
-                Thread.sleep(100L); //wait a bit
-            } catch (Exception var3) {
-                System.out.println("Error");
-            }
-        });
+//----------------------------------------------------------------------------------------------------------------------
+                 //INITIALIZE SENDING THE G-CODE
+                 PrintWriter output = new PrintWriter(portName.getOutputStream());
+                 output.flush();
+//----------------------------------------------------------------------------------------------------------------------
+                 Thread thread = new Thread(() -> {
+                     try {
+                         Thread.sleep(100L); //wait a bit
+                     } catch (Exception var4) {
+                         System.out.println("Error");
+                     }
+
+                     output.print("F1500 \n"); //set the FeedRate
+                     output.print(startPointCode + '\n'); //send the Start Point
+                     output.print(circleCode + '\n'); //Send the Circle Code
+
+                     //DEBUGGING-----------------------------------------------------------------------------------------------------
+                     System.out.println(startPointCode);
+                     System.out.println(circleCode);
+                     //--------------------------------------------------------------------------------------------------------------
+
+
+                     output.flush(); // Flush the port
+
+                     System.out.println("DATA SENT");
+                     try {
+                         Thread.sleep(100L); //wait a bit
+                     } catch (Exception var3) {
+                         System.out.println("Error");
+                     }
+                 });
 //----------------------------------------------------------------------------------------------------------------------
 //THIS PART DELAYS THE SENDING
-        /*
-        * This is necessary, because GRBL needs some time to process the G-Code it´s sent
-        */
-        Timer timer2 = new Timer();
-        timer2.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                if(run){
-                    //noinspection CatchMayIgnoreException
-                    try{
-                        thread.start();
-                    }catch (Exception ex){
+                 /*
+                  * This is necessary, because GRBL needs some time to process the G-Code it´s sent
+                  */
 
-                    }
-                    run = !run;
+                 timer2.scheduleAtFixedRate(new TimerTask() {
+                     @Override
+                     public void run() {
+                         if (run) {
+                             //noinspection CatchMayIgnoreException
+                             try {
+                                 thread.start();
+                             } catch (Exception ex) {
 
-                }
-            }
-        },2000,100);
+                             }
+                             run = !run;
 
-    }
+                         }
+                     }
+                 }, 2000, 2000);
+
+             }
+         }
 }
