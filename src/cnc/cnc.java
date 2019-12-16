@@ -179,7 +179,7 @@ class cnc {
                          System.out.println("Error");
                      }
 
-                     output.print("F1500 \n"); //set the FeedRate
+                     output.print("F4000 \n"); //set the FeedRate
                      output.print(startPointCode + '\n'); //send the Start Point
                      output.print(circleCode + '\n'); //Send the Circle Code
 
