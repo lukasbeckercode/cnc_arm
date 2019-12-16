@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc82cbe1-a00c-40b5-b6b9-83161b453025" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cncArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cncArm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,6 +26,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="lukas_Laptop &lt;lukas.becker.lb@outlook.com&gt;" />
         <option value="Lukas &lt;lukas.becker.lb@gmail.com&gt;" />
       </list>
     </option>
@@ -53,11 +52,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,7 +72,7 @@
   </component>
   <component name="RunManager">
     <configuration name="cnc" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="cnc.cnc" />
       <module name="cncArm" />
@@ -148,21 +147,35 @@
       <option name="project" value="LOCAL" />
       <updated>1573564151243</updated>
     </task>
-    <task id="LOCAL-00008" summary="Edited Readme.md">
-      <created>1573565755851</created>
+    <task id="LOCAL-00008" summary="Entered boundaries&#10;Changed diameter values&#10;Changed absolute I and J to relative I and J&#10;Modified config.txt for testing">
+      <created>1576438721476</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1573565755851</updated>
+      <updated>1576438721476</updated>
     </task>
-    <task id="LOCAL-00009" summary="Created .gitignore">
-      <created>1573565802655</created>
+    <task id="LOCAL-00009" summary="Learned about static variables today :(">
+      <created>1576444343809</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1573565802655</updated>
+      <updated>1576444343809</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Feedrate Changed&#10;WORKING">
+      <created>1576496300691</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576496300691</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Minor bug-fixes">
+      <created>1576496943312</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576496943312</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,25 +199,33 @@
     <MESSAGE value="Added full Serial Communication! &#10;Code works!" />
     <MESSAGE value="Added full Serial Communication! &#10;Code works!&#10;Performed Code-Cleanup" />
     <MESSAGE value="Added a config file&#10;Added comments" />
-    <MESSAGE value="Edited Readme.md" />
-    <MESSAGE value="Created .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created .gitignore" />
+    <MESSAGE value="Entered boundaries&#10;Changed diameter values&#10;Changed absolute I and J to relative I and J&#10;Modified config.txt for testing" />
+    <MESSAGE value="Learned about static variables today :(" />
+    <MESSAGE value="Feedrate Changed&#10;WORKING" />
+    <MESSAGE value="Minor bug-fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bug-fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="606" y="114" key="CommitChangelistDialog2" timestamp="1576172805645">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1576511178176">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="606" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576172805645" />
-    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576172677589">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576172677589" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1576511178176" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cnc/cnc.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="portName" language="JAVA" />
         <watch expression="run" language="JAVA" />
+        <watch expression="output" />
       </configuration>
     </watches-manager>
   </component>
