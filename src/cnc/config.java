@@ -1,6 +1,6 @@
 package cnc;
 
-public class config {
+class config {
     boolean def;
     String port;
     int cycles;
