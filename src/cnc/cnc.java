@@ -18,9 +18,9 @@ class cnc {
 
     private static SerialPort portName;
     private  boolean run = false;
-    private static File configFile = new File("config.txt");
-    private Timer timer2 = new Timer();
-   int getCycles;
+    private static final File configFile = new File("config.txt");
+    private final Timer timer2 = new Timer();
+   private int getCycles;
 //----------------------------------------------------------------------------------------------------------------------
     public static void main(String [] args) throws FileNotFoundException {
         //LOCAL VARIABLES
@@ -52,7 +52,7 @@ class cnc {
             String msg = i + ": " + portList.get(i);
             System.out.println(msg);
         }
-        int choice = 1;
+        int choice;
         try {
             choice = System.in.read() - 48; //ASCII-Int conversion
            config.port =  availablePorts[choice].getSystemPortName();
@@ -119,6 +119,7 @@ class cnc {
     //THIS METHOD CREATES RANDOM CIRCLES
          @SuppressWarnings("SameParameterValue")
          private void createCode(@SuppressWarnings("SameParameterValue") int min, int max) {
+             PrintWriter output = new PrintWriter(portName.getOutputStream());
              for (int i = -1; i < getCycles; i++) {
                  //LOCAL VARIABLES
                  Random random = new Random();
@@ -169,7 +170,7 @@ class cnc {
 
 //----------------------------------------------------------------------------------------------------------------------
                  //INITIALIZE SENDING THE G-CODE
-                 PrintWriter output = new PrintWriter(portName.getOutputStream());
+
                  output.flush();
 //----------------------------------------------------------------------------------------------------------------------
                  Thread thread = new Thread(() -> {
@@ -221,5 +222,6 @@ class cnc {
                  }, 2000, 2000);
 
              }
+
          }
 }
