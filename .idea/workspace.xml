@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc82cbe1-a00c-40b5-b6b9-83161b453025" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cnc/cnc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cnc/cnc.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +26,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="lukas_Laptop &lt;lukas.becker.lb@outlook.com&gt;" />
         <option value="Lukas &lt;lukas.becker.lb@gmail.com&gt;" />
       </list>
     </option>
@@ -155,7 +154,28 @@
       <option name="project" value="LOCAL" />
       <updated>1576438721476</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Learned about static variables today :(">
+      <created>1576444343809</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576444343809</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Feedrate Changed&#10;WORKING">
+      <created>1576496300691</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576496300691</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Minor bug-fixes">
+      <created>1576496943312</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576496943312</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,14 +200,23 @@
     <MESSAGE value="Added full Serial Communication! &#10;Code works!&#10;Performed Code-Cleanup" />
     <MESSAGE value="Added a config file&#10;Added comments" />
     <MESSAGE value="Entered boundaries&#10;Changed diameter values&#10;Changed absolute I and J to relative I and J&#10;Modified config.txt for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entered boundaries&#10;Changed diameter values&#10;Changed absolute I and J to relative I and J&#10;Modified config.txt for testing" />
+    <MESSAGE value="Learned about static variables today :(" />
+    <MESSAGE value="Feedrate Changed&#10;WORKING" />
+    <MESSAGE value="Minor bug-fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bug-fixes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1576511178176">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1576511178176" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cnc/cnc.java</url>
-          <line>212</line>
+          <line>213</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
