@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc82cbe1-a00c-40b5-b6b9-83161b453025" name="Default Changelist" comment="code terminates automatically now">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cncArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cncArm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cnc/cnc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cnc/cnc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +65,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="cnc" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -203,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576550554802</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="USE JAVA 9!">
+      <created>1576552032302</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576552032302</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +238,8 @@
     <MESSAGE value="Feedrate Changed&#10;WORKING" />
     <MESSAGE value="Minor bug-fixes" />
     <MESSAGE value="code terminates automatically now" />
-    <option name="LAST_COMMIT_MESSAGE" value="code terminates automatically now" />
+    <MESSAGE value="USE JAVA 9!" />
+    <option name="LAST_COMMIT_MESSAGE" value="USE JAVA 9!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Project_Structure" timestamp="1576550905788">
@@ -251,30 +258,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="388" y="196" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1576549681384" />
-    <state x="296" y="0" key="CommitChangelistDialog2" timestamp="1576550553674">
+    <state x="296" y="0" key="CommitChangelistDialog2" timestamp="1576552030994">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1576550553674" />
+    <state x="296" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1576552030994" />
     <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1576551887452">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1576551887452" />
-    <state width="1202" height="158" key="GridCell.Tab.0.bottom" timestamp="1576551460911">
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1576552352277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
-    <state width="1202" height="158" key="GridCell.Tab.0.center" timestamp="1576551460911">
+    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1576552352277" />
+    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1576552352277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
-    <state width="1202" height="158" key="GridCell.Tab.0.left" timestamp="1576551460911">
+    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1576552352277" />
+    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1576552352277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
-    <state width="1202" height="158" key="GridCell.Tab.0.right" timestamp="1576551460911">
+    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1576552352277" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1576552352277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
+    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1576552352277" />
     <state width="1202" height="203" key="GridCell.Tab.1.bottom" timestamp="1576547074136">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -291,29 +298,20 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1202" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1576547074136" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1576551937998">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1576596158854">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1576551937998" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1576550754195">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1576596158854" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1576552038385">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1576550754195" />
-    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1576551794006">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1576552038385" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1576609774638">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1576551794006" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1576609774638" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cnc/cnc.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="portName" language="JAVA" />

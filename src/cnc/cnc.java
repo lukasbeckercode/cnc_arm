@@ -22,7 +22,7 @@ class cnc {
     private final Timer timer2 = new Timer();
     private int getCycles;
     @SuppressWarnings("FieldCanBeLocal")
-    private final long killDelay = 30000;
+    private final long killDelay = 120000;
 //----------------------------------------------------------------------------------------------------------------------
     public static void main(String [] args) throws FileNotFoundException {
         //LOCAL VARIABLES
@@ -131,7 +131,7 @@ class cnc {
                  int globalXMax = 260; //Physical X Border
                  int newXMax = globalXMax - Diameter; //Virtual Border
 
-                 int globalYMax = 630; //Physical Y Border
+                 int globalYMax = 380; //Physical Y Border
                  int newYMax = globalYMax - Diameter; //Virtual Border
                  int startX = random.nextInt((newXMax - Diameter) + 1) + Diameter; //Starting point within Borders
                  int startY = random.nextInt((newYMax - Diameter) + 1) + Diameter; //Starting point within Borders
