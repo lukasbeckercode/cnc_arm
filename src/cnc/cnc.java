@@ -20,7 +20,9 @@ class cnc {
     private  boolean run = false;
     private static final File configFile = new File("config.txt");
     private final Timer timer2 = new Timer();
-   private int getCycles;
+    private int getCycles;
+    @SuppressWarnings("FieldCanBeLocal")
+    private final long killDelay = 30000;
 //----------------------------------------------------------------------------------------------------------------------
     public static void main(String [] args) throws FileNotFoundException {
         //LOCAL VARIABLES
@@ -120,7 +122,7 @@ class cnc {
          @SuppressWarnings("SameParameterValue")
          private void createCode(@SuppressWarnings("SameParameterValue") int min, int max) {
              PrintWriter output = new PrintWriter(portName.getOutputStream());
-             for (int i = -1; i < getCycles; i++) {
+             for (int i = 0; i < getCycles; i++) {
                  //LOCAL VARIABLES
                  Random random = new Random();
                  int Diameter = random.nextInt((max - min) + 1) + min; //Creates a random diameter within our machine bounds
@@ -219,9 +221,21 @@ class cnc {
 
                          }
                      }
-                 }, 2000, 2000);
+                 }, 1000, 10);
 
              }
+//----------------------------------------------------------------------------------------------------------------------
+//THIS PART DELAYS THE KILLING OF THIS CODE
+             /*
+              * This is necessary, because the code need some Time to send the GCode
+              */
+             Timer killTimer = new Timer();
+             killTimer.schedule(new TimerTask() {
+                 @Override
+                 public void run() {
+                     System.exit(0);
+                 }
+             },killDelay);
 
          }
 }
