@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc82cbe1-a00c-40b5-b6b9-83161b453025" name="Default Changelist" comment="code terminates automatically now">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cncArm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cncArm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cnc/cnc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cnc/cnc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,14 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="ALOWmFcw" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="9.0" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1SFx7M4Sih6gXib5FnZ4e72anBf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,11 +66,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RunManager">
     <configuration name="cnc" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -187,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576511195205</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="code terminates automatically now">
+      <created>1576550554802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576550554802</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,37 +231,50 @@
     <MESSAGE value="Learned about static variables today :(" />
     <MESSAGE value="Feedrate Changed&#10;WORKING" />
     <MESSAGE value="Minor bug-fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bug-fixes" />
+    <MESSAGE value="code terminates automatically now" />
+    <option name="LAST_COMMIT_MESSAGE" value="code terminates automatically now" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#Project_Structure" timestamp="1576511261667">
+    <state x="233" y="0" key="#Project_Structure" timestamp="1576550905788">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1576511261667" />
+    <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1576550905788" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576551896287">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1576551896287" />
+    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1576551877673">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1576551877673" />
     <state x="388" y="196" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1576549681384">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="388" y="196" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1576549681384" />
-    <state x="296" y="0" key="CommitChangelistDialog2" timestamp="1576549833913">
+    <state x="296" y="0" key="CommitChangelistDialog2" timestamp="1576550553674">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1576549833913" />
-    <state width="1202" height="158" key="GridCell.Tab.0.bottom" timestamp="1576550457579">
+    <state x="296" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1576550553674" />
+    <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1576551887452">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1576550457579" />
-    <state width="1202" height="158" key="GridCell.Tab.0.center" timestamp="1576550457578">
+    <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1576551887452" />
+    <state width="1202" height="158" key="GridCell.Tab.0.bottom" timestamp="1576551460911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1576550457578" />
-    <state width="1202" height="158" key="GridCell.Tab.0.left" timestamp="1576550457578">
+    <state width="1202" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
+    <state width="1202" height="158" key="GridCell.Tab.0.center" timestamp="1576551460911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1576550457578" />
-    <state width="1202" height="158" key="GridCell.Tab.0.right" timestamp="1576550457579">
+    <state width="1202" height="158" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
+    <state width="1202" height="158" key="GridCell.Tab.0.left" timestamp="1576551460911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1202" height="158" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1576550457579" />
+    <state width="1202" height="158" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
+    <state width="1202" height="158" key="GridCell.Tab.0.right" timestamp="1576551460911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1202" height="158" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1576551460911" />
     <state width="1202" height="203" key="GridCell.Tab.1.bottom" timestamp="1576547074136">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -262,14 +291,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1202" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1576547074136" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1576511220664">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1576551937998">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1576511220664" />
-    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1576549045869">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1576551937998" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1576550754195">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1576549045869" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1576550754195" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1576551794006">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1576551794006" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
